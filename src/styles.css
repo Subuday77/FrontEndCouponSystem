@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position:fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    color: chartreuse;
+}
+.menu-btn{
+    
+    background-color: darkorange;
+    border: darkorange;
+    font-size: 20px;
+    text-decoration: underline;
+    color:brown;
+    margin-top: 10px;
+    
+}
+.menu-btn:hover{
+    color:white;
+}
+.menu-btn:focus {
+    border: none;
+    outline: none;
+    color:black;
+    font-weight: bold;
+    text-decoration:none;
+}

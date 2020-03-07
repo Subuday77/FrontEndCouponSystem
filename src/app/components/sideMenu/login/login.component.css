@@ -1,0 +1,31 @@
+.lgn-btn{
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: darkorange;
+    margin-top: 15px;
+    padding: 15px 44px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.lgn-btn:hover {
+    background-color: brown;
+    color: white;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.square {
+    height: 200px;
+    width: 190px;
+    background-color:darkorange;
+    position: absolute;
+    margin-left: -1ex;
+  }
+.dropdownlist{
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: white;
+    padding: 10px 15px;
+}
