@@ -1,1 +1,35 @@
-<p>get-all-coupons works!</p>
+<h1>All coupons</h1>
+
+<table class=table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Amount</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>UID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let coupon of coupons">
+            <td>{{coupon.id}}</td>
+            <td>{{coupon.title}}</td>
+            <td>{{coupon.description}}</td>
+            <td>{{coupon.startDate}}</td>
+            <td>{{coupon.endDate}}</td>
+            <td>{{coupon.amount}}</td>
+            <td>{{coupon.price}}</td>
+            <td>{{coupon.category}}</td>
+            <td>{{coupon.uid}}</td>
+            <td>
+                <button>Update</button>
+                <button (click) = "deleteCoupon(coupon.id)">Delete</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

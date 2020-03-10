@@ -35,6 +35,7 @@ import { UpdateCompanyComponent } from './components/middleDesk/companyMenu/upda
 import { GetAllCustomerCouponsComponent } from './components/middleDesk/customerMenu/get-all-customer-coupons/get-all-customer-coupons.component';
 import { FindCouponComponent } from './components/middleDesk/customerMenu/find-coupon/find-coupon.component';
 import { UpdateCustomerComponent } from './components/middleDesk/customerMenu/update-customer/update-customer.component';
+import { GetAllAvailableCouponsComponent } from './components/middleDesk/customerMenu/get-all-available-coupons/get-all-available-coupons.component';
 
 
 
@@ -70,7 +71,8 @@ import { UpdateCustomerComponent } from './components/middleDesk/customerMenu/up
     UpdateCompanyComponent,
     GetAllCustomerCouponsComponent,
     FindCouponComponent,
-    UpdateCustomerComponent
+    UpdateCustomerComponent,
+    GetAllAvailableCouponsComponent
     
 
   ],

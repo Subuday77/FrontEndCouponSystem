@@ -18,14 +18,16 @@ export class GetAllCompaniesComponent implements OnInit {
   ngOnInit(): void {
     this.updateData();
   }
+
   deleteCompany(id:number){
     console.log(id,this.loginService.token)
-    
-    
-    this.adminService.deleteCompany(id,this.loginService.token);
-    console.log(id,this.loginService.token)
-    this.updateData();
-  }
+     
+    this.adminService.deleteCompany(id,this.loginService.token).subscribe(() => {
+    console.log("Company deleted");
+      
+  });
+  this.updateData();
+}
 
   updateData():void {
     this.adminService.getAllCompanies(this.loginService.token).subscribe((result) => {

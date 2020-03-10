@@ -19,11 +19,13 @@ import { FindCustomerComponent } from './components/middleDesk/adminMenu/find-cu
 import { DeleteOutdatedCouponsComponent } from './components/middleDesk/adminMenu/delete-outdated-coupons/delete-outdated-coupons.component';
 import { AddCouponComponent } from './components/middleDesk/companyMenu/add-coupon/add-coupon.component';
 import { GetAllCouponsComponent } from './components/middleDesk/companyMenu/get-all-coupons/get-all-coupons.component';
+
 import { FindCompanyCouponComponent } from './components/middleDesk/companyMenu/find-company-coupon/find-company-coupon.component';
 import { UpdateCompanyComponent } from './components/middleDesk/companyMenu/update-company/update-company.component';
 import { GetAllCustomerCouponsComponent } from './components/middleDesk/customerMenu/get-all-customer-coupons/get-all-customer-coupons.component';
 import { FindCouponComponent } from './components/middleDesk/customerMenu/find-coupon/find-coupon.component';
 import { UpdateCustomerComponent } from './components/middleDesk/customerMenu/update-customer/update-customer.component';
+import { GetAllAvailableCouponsComponent } from './components/middleDesk/customerMenu/get-all-available-coupons/get-all-available-coupons.component';
 
 
 const routes: Routes = [
@@ -44,6 +46,7 @@ const routes: Routes = [
   { path: 'deleteOutdatedCoupons', component: DeleteOutdatedCouponsComponent, outlet:"middle"},
   { path: 'addCoupon', component: AddCouponComponent, outlet:"middle"},
   { path: 'getAllCoupons', component: GetAllCouponsComponent, outlet:"middle"},
+  { path: 'getAllAvailableCoupons', component: GetAllAvailableCouponsComponent, outlet:"middle"},
   { path: 'findCompanyCoupon', component: FindCompanyCouponComponent, outlet:"middle"},
   { path: 'updateCompany', component: UpdateCompanyComponent, outlet:"middle"},
   { path: 'getAllCustomerCoupons', component: GetAllCustomerCouponsComponent, outlet:"middle"},

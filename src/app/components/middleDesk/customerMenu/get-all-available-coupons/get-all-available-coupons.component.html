@@ -9,7 +9,7 @@
             <th>End Date</th>
             <th>Category</th>
             <th>Image</th>
-
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -21,7 +21,9 @@
             <td>{{coupon.category}}</td>
             <td>{{coupon.image}}</td>
 
-
+            <td>
+                <button (click)="purchaseCoupon(coupon.id)">Purchase</button>
+            </td>
 
         </tr>
     </tbody>
