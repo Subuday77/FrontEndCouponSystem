@@ -29,3 +29,6 @@ html,body{
     font-weight: bold;
     text-decoration:none;
 }
+th,td {
+    border: 1px solid chartreuse;
+  }

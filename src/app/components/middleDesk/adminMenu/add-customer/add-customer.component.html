@@ -1,1 +1,9 @@
-<p>add-customer works!</p>
+<h1>Add Customer</h1><br>
+
+<input type="text" [(ngModel)]="customer.firstName" placeholder="First Name">
+<input type="text" [(ngModel)]="customer.lastName" placeholder="Last Name">
+<input type="email" [(ngModel)]="customer.email" placeholder="Email">
+<input type="password" [(ngModel)]="customer.password" placeholder="Password">
+<input type="password" [(ngModel)]="rpassword" placeholder="Repeat Password">
+<button (click)="addCustomer()">Submit</button>
+<button (click)="clear()">Clear</button>

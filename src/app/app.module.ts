@@ -30,12 +30,15 @@ import { FindCustomerComponent } from './components/middleDesk/adminMenu/find-cu
 import { DeleteOutdatedCouponsComponent } from './components/middleDesk/adminMenu/delete-outdated-coupons/delete-outdated-coupons.component';
 import { AddCouponComponent } from './components/middleDesk/companyMenu/add-coupon/add-coupon.component';
 import { GetAllCouponsComponent } from './components/middleDesk/companyMenu/get-all-coupons/get-all-coupons.component';
-import { FindCompanyCouponComponent } from './components/middleDesk/companyMenu/find-company-coupon/find-company-coupon.component';
+//import { FindCompanyCouponComponent } from './components/middleDesk/companyMenu/find-company-coupon/find-company-coupon.component';
 import { UpdateCompanyComponent } from './components/middleDesk/companyMenu/update-company/update-company.component';
 import { GetAllCustomerCouponsComponent } from './components/middleDesk/customerMenu/get-all-customer-coupons/get-all-customer-coupons.component';
-import { FindCouponComponent } from './components/middleDesk/customerMenu/find-coupon/find-coupon.component';
+//import { FindCouponComponent } from './components/middleDesk/customerMenu/find-coupon/find-coupon.component';
 import { UpdateCustomerComponent } from './components/middleDesk/customerMenu/update-customer/update-customer.component';
 import { GetAllAvailableCouponsComponent } from './components/middleDesk/customerMenu/get-all-available-coupons/get-all-available-coupons.component';
+import { CompanyInfoComponent } from './components/middleDesk/adminMenu/get-all-companies/company-info/company-info.component';
+import { CustomerInfoComponent } from './components/middleDesk/adminMenu/get-all-customers/customer-info/customer-info.component';
+import { UpdateCouponComponent } from './components/middleDesk/companyMenu/update-coupon/update-coupon.component';
 
 
 
@@ -67,12 +70,15 @@ import { GetAllAvailableCouponsComponent } from './components/middleDesk/custome
     DeleteOutdatedCouponsComponent,
     AddCouponComponent,
     GetAllCouponsComponent,
-    FindCompanyCouponComponent,
+   // FindCompanyCouponComponent,
     UpdateCompanyComponent,
     GetAllCustomerCouponsComponent,
-    FindCouponComponent,
+   // FindCouponComponent,
     UpdateCustomerComponent,
-    GetAllAvailableCouponsComponent
+    GetAllAvailableCouponsComponent,
+    CompanyInfoComponent,
+    CustomerInfoComponent,
+    UpdateCouponComponent
     
 
   ],

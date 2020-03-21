@@ -1,5 +1,16 @@
 <h1>All coupons</h1>
 
+<h2>Search by</h2>
+<input type="number" min="0" [(ngModel)]="price" placeholder="Price"><br>
+<select class="dropdownlist"  [(ngModel)]="category">
+    <option [ngValue]="undefined"  disabled selected>Category</option>
+    <option value="Food">Food</option>
+    <option value="Electricity">Electricity</option>
+    <option value="Restaurant">Restaurant</option>
+    <option value="Vacation">Vacation</option>
+</select><br>
+<button (click)="findCoupons()">Find</button>
+<button (click)="clear()">Clear</button>
 <table class=table>
     <thead>
         <tr>

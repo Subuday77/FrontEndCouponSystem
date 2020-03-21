@@ -11,7 +11,7 @@ export class LoginService {
 
 public id:number;
 public token=uuid.v4();
-public accessLevel:number;
+public accessLevel:number=-1;
 
   constructor(private httpLogin:HttpClient) { }
 

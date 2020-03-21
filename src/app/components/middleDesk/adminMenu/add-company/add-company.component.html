@@ -1,1 +1,8 @@
-<p>add-company works!</p>
+<h1>Add Company</h1><br>
+
+<input type="text" [(ngModel)]="company.name" placeholder="Company Name">
+<input type="email" [(ngModel)]="company.email" placeholder="Email">
+<input type="password" [(ngModel)]="company.password" placeholder="Password">
+<input type="password" [(ngModel)]="rpassword" placeholder="Repeat Password">
+<button (click)="addCompany()">Submit</button>
+<button (click)="clear()">Clear</button>

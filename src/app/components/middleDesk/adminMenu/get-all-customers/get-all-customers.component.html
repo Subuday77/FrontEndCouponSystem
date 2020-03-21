@@ -1,5 +1,14 @@
 <h1>All customers</h1>
 
+<h2>Search by</h2>
+<input type="number" min="1" [(ngModel)]="id" placeholder="ID">
+<input type="text" [(ngModel)]="firstName" placeholder="First Name">
+<input type="text" [(ngModel)]="lastName" placeholder="Last Name">
+<input type="email" [(ngModel)]="email" placeholder="Email">
+<input type="text" [(ngModel)]="uid" placeholder="UID">
+<button (click)="findCustomer()">Find</button>
+<button (click)="clear()">Clear</button>
+
 <table class=table>
     <thead>
         <tr>
@@ -22,8 +31,8 @@
             <td>{{customer.uid}}</td>
             <td>
                 <button>Update</button>
-                <button>Details</button>
-                <button (click) = "deleteCustomer(customer.id)">Delete</button>
+                <button (click)="customerInfo(customer.id)">Details</button>
+                <button (click)="deleteCustomer(customer.id)">Delete</button>
             </td>
 
         </tr>

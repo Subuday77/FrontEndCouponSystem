@@ -1,5 +1,15 @@
 <h1>All companies</h1>
 
+<h2>Search by</h2>
+<input type="number" min="0" [(ngModel)]="id" placeholder="ID">
+<input type="text" [(ngModel)]="name" placeholder="Company Name">
+<input type="email" [(ngModel)]="email" placeholder="Email">
+<input type="text" [(ngModel)]="uid" placeholder="UID">
+<button (click)="findCompany()">Find</button>
+<button (click)="clear()">Clear</button>
+
+
+
 <table class=table>
     <thead>
         <tr>
@@ -20,8 +30,9 @@
             <td>{{company.uid}}</td>
             <td>
                 <button>Update</button>
-                <button>Details</button>
-                <button (click) = "deleteCompany(company.id)">Delete</button>
+
+                <button (click)="companyInfo(company.id)">Details</button>
+                <button (click)="deleteCompany(company.id)">Delete</button>
             </td>
 
         </tr>

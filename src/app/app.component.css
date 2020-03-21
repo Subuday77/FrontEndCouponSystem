@@ -26,6 +26,7 @@ section{
   body{
     grid-column: span 10;
     border: 2px solid gray;
+    
   }
   
   footer{
@@ -33,3 +34,4 @@ section{
     border: 2px solid gray;
   }
   
+

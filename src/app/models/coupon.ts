@@ -1,15 +1,15 @@
 import {Category}from './category.enum'
 export class Coupon {
-    private id: number;
-    private companyId: number;
-    private uid: String;
-    private title: String;
-    private description: String;
-    private startDate: Date;
-    private endDate: Date;
-    private amount: number;
-    private price: number;
-    private image: String;
-    private  category: Category;
+    public id: number;
+    public companyId: number;
+    public uid: String;
+    public title: String;
+    public description: String;
+    public startDate: Date;
+    public endDate: Date;
+    public amount: number;
+    public price: number;
+    public image: String;
+    public  category: Category;
 
 }

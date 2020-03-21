@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
 import { LoginResult } from 'src/app/models/login-result';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import * as uuid from 'uuid';
 
 // export function back() {
 //     if (this.serverRes==="admin"){
@@ -31,9 +34,9 @@ export class LoginComponent implements OnInit {
   public email: String = '';
   public password: String = '';
   public logout: boolean = true;
-  public error:boolean=true;
+  public err: boolean = true;
 
-  public constructor(private router: Router, private loginService: LoginService) { }
+  public constructor(private router: Router, private loginService: LoginService, private http: HttpClient) { }
 
   ngOnInit() {
   }
@@ -46,15 +49,12 @@ export class LoginComponent implements OnInit {
         this.loginService.token = loginResult.token;
         this.loginService.accessLevel = loginResult.accessLevel;
         console.log(loginResult);
+        this.successfulLoginAdmin();
         
       }, (error) => {
-        
-        this.router.navigate([{ outlets: { side: 'app-login' } }]);
-        console.log(error);
+        this.unsuccsessfulLogin();
       })
       
-      this.router.navigate([{ outlets: { side: 'admin-menu' } }]);
-      // this.logout=true;
     }
     else if (this.serverRes === "company") {
       this.loginService.login(this.email, this.password, 1).subscribe((loginResult) => {
@@ -62,15 +62,12 @@ export class LoginComponent implements OnInit {
         this.loginService.token = loginResult.token;
         this.loginService.accessLevel = loginResult.accessLevel;
         console.log(loginResult);
-        
+        this.successfulLoginCompany()
       }, (error) => {
-        
-        this.router.navigate([{ outlets: { side: 'app-login' } }]);
-        console.log(error);
+        this.unsuccsessfulLogin()
       })
 
-      this.router.navigate([{ outlets: { side: 'company-menu' } }]);
-      // this.logout=true;
+      
     }
     else if (this.serverRes === "customer") {
 
@@ -79,30 +76,26 @@ export class LoginComponent implements OnInit {
         this.loginService.token = loginResult.token;
         this.loginService.accessLevel = loginResult.accessLevel;
         console.log(loginResult);
-        
+        this.successfulLoginCusomer();
       }, (error) => {
-        
-        this.router.navigate([{ outlets: { side: 'app-login' } }]);
-        console.log(error);
+        this.unsuccsessfulLogin()
       })
 
-      this.router.navigate([{ outlets: { side: 'customer-menu' } }]);
-      // this.logout=true;
     }
 
   }
-  //  public back():void {
-  //     if (this.serverRes==="admin"){
-  //         this.router.navigate([{outlets:{side:'admin-menu'}}]);
-  //         // this.logout=true;
-  //         }
-  //         else if (this.serverRes==="company"){
-  //           this.router.navigate([{outlets:{side:'company-menu'}}]);
-  //           // this.logout=true;
-  //         }
-  //         else if (this.serverRes==="customer"){
-  //           this.router.navigate([{outlets:{side:'customer-menu'}}]);
-  //           // this.logout=true;
-  //         }
-  //  }
+  unsuccsessfulLogin() {
+    this.router.navigate([{ outlets: { side: 'app-login' } }]);
+    console.log(console.error());
+    alert("Invalid credentials.")
+  }
+  successfulLoginAdmin() {
+    this.router.navigate([{ outlets: { side: 'admin-menu' } }]);
+  }
+  successfulLoginCompany() {
+    this.router.navigate([{ outlets: { side: 'company-menu' } }]);
+  }
+  successfulLoginCusomer() {
+    this.router.navigate([{ outlets: { side: 'customer-menu' } }]);
+  }
 }

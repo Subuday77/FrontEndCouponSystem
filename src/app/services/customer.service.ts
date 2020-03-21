@@ -19,7 +19,13 @@ export class CustomerService {
   getAllCustomerCoupons(id: number, token = uuid.v4()): Observable<any> {
     return this.httpCustomer.get('http://localhost:8080/customer/getcoupons?id=' + id + '&token=' + token);
   }
-  purchaseCoupon(couponid:number,customerid:number,token=uuid.v4()):Observable<any>{
-    return this.httpCustomer.put('http://localhost:8080/customer/purchase?couponid='+couponid+'&customerid='+customerid+'&token='+token,null);
+  purchaseCoupon(couponid: number, customerid: number, token = uuid.v4()): Observable<any> {
+    return this.httpCustomer.put('http://localhost:8080/customer/purchase?couponid=' + couponid + '&customerid=' + customerid + '&token=' + token, null);
+  }
+  findCoupons(id: number, price: number, category: String, token = uuid.v4()): Observable<any> {
+    return this.httpCustomer.get('http://localhost:8080/customer/findallcouponsbypriceandcategory?id=' + id + '&price=' + price + '&category=' + category + '&token=' + token);
+
+  }findCustomerCoupons(id: number, price: number, category: String, token = uuid.v4()): Observable<any> {
+    return this.httpCustomer.get('http://localhost:8080/customer/findcouponsbypriceandcategory?id=' + id + '&price=' + price + '&category=' + category + '&token=' + token);
   }
 }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FindCouponComponent } from './find-coupon.component';
+import { UpdateCouponComponent } from './update-coupon.component';
 
-describe('FindCouponComponent', () => {
-  let component: FindCouponComponent;
-  let fixture: ComponentFixture<FindCouponComponent>;
+describe('UpdateCouponComponent', () => {
+  let component: UpdateCouponComponent;
+  let fixture: ComponentFixture<UpdateCouponComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FindCouponComponent ]
+      declarations: [ UpdateCouponComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FindCouponComponent);
+    fixture = TestBed.createComponent(UpdateCouponComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
