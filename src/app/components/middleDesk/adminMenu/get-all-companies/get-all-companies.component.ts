@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class GetAllCompaniesComponent implements OnInit {
   public companies: Observable<Company[]>;
-  
+
   public id: String = null;
   public name: String = null;
   public email: String = null;
@@ -41,15 +41,21 @@ export class GetAllCompaniesComponent implements OnInit {
     this.router.navigate(['', { outlets: { middle: ['companyInfo', id] } }])
   }
 
+  updateCompany(id: number) {
+    console.log(id, this.loginService.token)
+    this.router.navigate(['', { outlets: { middle: ['updateCompanyCommon', id] } }])
+  }
+
   findCompany() {
     console.log(this.loginService.token)
     this.adminService.findCompany(this.id, this.name, this.email, this.uid, this.loginService.token).subscribe((result) => {
+
       this.companies = result;
       console.log(result);
     }, (error) => {
       console.log(error);
     });
-    if (this.id===null && this.name===null && this.email===null && this.uid===null){
+    if ((this.id === null || this.id === undefined || this.id.toString() === "") && (this.name === null || this.name === undefined || this.name === "") && (this.email === null || this.email === undefined || this.email === "") && (this.uid === null || this.uid === undefined || this.uid === "")) {
       alert("Search parameters doesn't set!")
       this.updateData()
     }

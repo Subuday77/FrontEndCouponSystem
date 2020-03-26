@@ -27,4 +27,12 @@
 </table>
 <br>
 <br>
-<button (click)="updateCompany(company.id)">Update</button>
+
+<h2>What do you want to change?</h2>
+<br>
+<input type="text" [(ngModel)]="ucompany.name" placeholder="Company Name">
+<input type="email" [(ngModel)]="ucompany.email" placeholder="Email">
+<input type="password" [(ngModel)]="ucompany.password" placeholder="Password">
+<input type="password" [(ngModel)]="rpassword" placeholder="Repeat Password">
+<button (click)="updateCompany()">Submit</button>
+<button (click)="clear()">Clear</button>

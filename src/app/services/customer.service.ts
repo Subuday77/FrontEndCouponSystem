@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import * as uuid from 'uuid';
 import { HttpClient } from '@angular/common/http';
+import { Customer } from '../models/customer';
 
 
 @Injectable({
@@ -25,7 +26,13 @@ export class CustomerService {
   findCoupons(id: number, price: number, category: String, token = uuid.v4()): Observable<any> {
     return this.httpCustomer.get('http://localhost:8080/customer/findallcouponsbypriceandcategory?id=' + id + '&price=' + price + '&category=' + category + '&token=' + token);
 
-  }findCustomerCoupons(id: number, price: number, category: String, token = uuid.v4()): Observable<any> {
+  } findCustomerCoupons(id: number, price: number, category: String, token = uuid.v4()): Observable<any> {
     return this.httpCustomer.get('http://localhost:8080/customer/findcouponsbypriceandcategory?id=' + id + '&price=' + price + '&category=' + category + '&token=' + token);
+  }
+  findCustomerById(id: number, token = uuid.v4()): Observable<any> {
+    return this.httpCustomer.get('http://localhost:8080/customer/getcustomerbyid?id=' + id + '&token=' + token);
+  }
+  updateCustomer(customer: Customer, token = uuid.v4()): Observable<any> {
+    return this.httpCustomer.put('http://localhost:8080/customer/updatecustomer?token=' + token, customer);
   }
 }

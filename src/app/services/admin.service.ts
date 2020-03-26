@@ -50,5 +50,10 @@ export class AdminService {
   addCompany(company: Company, token = uuid.v4()): Observable<any> {
     return this.httpAdmin.post('http://localhost:8080/admin/addcompany?token=' + token, company);
   }
-
+  updateCompany(company: Company, token = uuid.v4()): Observable<any> {
+    return this.httpAdmin.put('http://localhost:8080/admin/updatecompany?token=' + token, company);
+  }
+  updateCustomer(customer: Customer, token = uuid.v4()): Observable<any> {
+    return this.httpAdmin.put('http://localhost:8080/admin/updatecustomer?token=' + token, customer);
+  }
 }

@@ -1,0 +1,44 @@
+<h1>Customer {{customer.firstName}} {{customer.lastName}}</h1>
+
+<table class=table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>UID</th>
+            
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{customer.id}}</td>
+            <td>{{customer.firstName}}</td>
+            <td>{{customer.lastName}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.password}}</td>
+            <td>{{customer.uid}}</td>
+            
+            
+
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>
+
+<br>
+<br>
+
+<h2>What do you want to change?</h2>
+<br>
+<input type="text" [(ngModel)]="ucustomer.firstName" placeholder="First Name">
+<input type="text" [(ngModel)]="ucustomer.lastName" placeholder="Last Name">
+<input type="email" [(ngModel)]="ucustomer.email" placeholder="Email">
+<input type="password" [(ngModel)]="ucustomer.password" placeholder="Password">
+<input type="password" [(ngModel)]="rpassword" placeholder="Repeat Password">
+<button (click)="updateCustomer()">Submit</button>
+<button (click)="clear()">Clear</button>

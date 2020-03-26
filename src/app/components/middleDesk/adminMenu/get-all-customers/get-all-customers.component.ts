@@ -42,6 +42,11 @@ customerInfo(id: number) {
   this.router.navigate(['', { outlets: { middle: ['customerInfo', id] } }])
 }
 
+updateCustomer(id:number){
+  console.log(id, this.loginService.token)
+  this.router.navigate(['', { outlets: { middle: ['updateCustomerCommon', id] } }])
+}
+
 findCustomer() {
   console.log(this.loginService.token)
   this.adminService.findCustomer(this.id, this.firstName, this.lastName, this.email, this.uid, this.loginService.token).subscribe((result) => {

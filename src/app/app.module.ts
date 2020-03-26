@@ -39,6 +39,9 @@ import { GetAllAvailableCouponsComponent } from './components/middleDesk/custome
 import { CompanyInfoComponent } from './components/middleDesk/adminMenu/get-all-companies/company-info/company-info.component';
 import { CustomerInfoComponent } from './components/middleDesk/adminMenu/get-all-customers/customer-info/customer-info.component';
 import { UpdateCouponComponent } from './components/middleDesk/companyMenu/update-coupon/update-coupon.component';
+import { UpdateCompanyCommonComponent } from './components/middleDesk/update-company-common/update-company-common.component';
+import { UpdateCustomerCommonComponent } from './components/middleDesk/update-customer-common/update-customer-common.component';
+import { UpdateCouponCommonComponent } from './components/middleDesk/update-coupon-common/update-coupon-common.component';
 
 
 
@@ -78,8 +81,10 @@ import { UpdateCouponComponent } from './components/middleDesk/companyMenu/updat
     GetAllAvailableCouponsComponent,
     CompanyInfoComponent,
     CustomerInfoComponent,
-    UpdateCouponComponent
-    
+    UpdateCouponComponent,
+    UpdateCompanyCommonComponent,
+    UpdateCustomerCommonComponent,
+    UpdateCouponCommonComponent
 
   ],
   imports: [

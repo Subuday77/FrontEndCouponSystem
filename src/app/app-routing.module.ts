@@ -22,9 +22,12 @@ import { GetAllCouponsComponent } from './components/middleDesk/companyMenu/get-
 
 //import { FindCompanyCouponComponent } from './components/middleDesk/companyMenu/find-company-coupon/find-company-coupon.component';
 import { UpdateCompanyComponent } from './components/middleDesk/companyMenu/update-company/update-company.component';
+import {UpdateCompanyCommonComponent} from './components/middleDesk/update-company-common/update-company-common.component'
 import { GetAllCustomerCouponsComponent } from './components/middleDesk/customerMenu/get-all-customer-coupons/get-all-customer-coupons.component';
 //import { FindCouponComponent } from './components/middleDesk/customerMenu/find-coupon/find-coupon.component';
 import { UpdateCustomerComponent } from './components/middleDesk/customerMenu/update-customer/update-customer.component';
+import { UpdateCustomerCommonComponent } from './components/middleDesk/update-customer-common/update-customer-common.component';
+import { UpdateCouponCommonComponent } from './components/middleDesk/update-coupon-common/update-coupon-common.component';
 import { GetAllAvailableCouponsComponent } from './components/middleDesk/customerMenu/get-all-available-coupons/get-all-available-coupons.component';
 import { CompanyInfoComponent } from './components/middleDesk/adminMenu/get-all-companies/company-info/company-info.component';
 import { CustomerInfoComponent } from './components/middleDesk/adminMenu/get-all-customers/customer-info/customer-info.component';
@@ -56,6 +59,9 @@ const routes: Routes = [
   { path: 'updateCustomer', component: UpdateCustomerComponent, outlet: "middle" },
   { path: 'companyInfo/:id', component: CompanyInfoComponent, outlet: "middle" },
   { path: 'customerInfo/:id', component: CustomerInfoComponent, outlet: "middle" },
+  { path: 'updateCompanyCommon/:id', component: UpdateCompanyCommonComponent, outlet: "middle" },
+  { path: 'updateCustomerCommon/:id', component: UpdateCustomerCommonComponent, outlet: "middle" },
+  { path: 'updateCouponCommon/:id', component: UpdateCouponCommonComponent, outlet: "middle" },
 
   { path: '', component: LoginComponent, outlet: "side" },
   { path: '**', component: LoginComponent, outlet: "side" }

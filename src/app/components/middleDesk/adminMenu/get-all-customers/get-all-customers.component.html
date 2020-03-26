@@ -30,7 +30,7 @@
             <td>{{customer.password}}</td>
             <td>{{customer.uid}}</td>
             <td>
-                <button>Update</button>
+                <button (click)="updateCustomer(customer.id)">Update</button>
                 <button (click)="customerInfo(customer.id)">Details</button>
                 <button (click)="deleteCustomer(customer.id)">Delete</button>
             </td>

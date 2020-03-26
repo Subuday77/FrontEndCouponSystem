@@ -35,6 +35,10 @@ export class GetAllCouponsComponent implements OnInit {
     alert("Coupon " + id + " deleted");
     this.updateData(this.loginService.id);
   }
+  updateCoupon(id:number){
+    console.log(id, this.loginService.token)
+    this.router.navigate(['', { outlets: { middle: ['updateCouponCommon', id] } }])
+  }
   findCoupons() {
     this.priceToSend = -1;
     console.log(this.priceToSend);

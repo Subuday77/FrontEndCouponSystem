@@ -2,8 +2,8 @@
 
 <h2>Search by</h2>
 <input type="number" min="0" [(ngModel)]="price" placeholder="Price"><br>
-<select class="dropdownlist"  [(ngModel)]="category">
-    <option [ngValue]="undefined"  disabled selected>Category</option>
+<select class="dropdownlist" [(ngModel)]="category">
+    <option [ngValue]="undefined" disabled selected>Category</option>
     <option value="Food">Food</option>
     <option value="Electricity">Electricity</option>
     <option value="Restaurant">Restaurant</option>
@@ -37,8 +37,8 @@
             <td>{{coupon.category}}</td>
             <td>{{coupon.uid}}</td>
             <td>
-                <button>Update</button>
-                <button (click) = "deleteCoupon(coupon.id)">Delete</button>
+                <button (click)="updateCoupon(coupon.id)">Update</button>
+                <button (click)="deleteCoupon(coupon.id)">Delete</button>
             </td>
 
         </tr>
