@@ -1,39 +1,262 @@
-html,body{
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
-    position:fixed;
+    position: fixed;
     top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
     color: chartreuse;
 }
-.menu-btn{
-    
+
+.menu-btn {
     background-color: darkorange;
     border: darkorange;
     font-size: 20px;
     text-decoration: underline;
-    color:brown;
+    color: brown;
     margin-top: 10px;
-    
+    text-align: left;
 }
-.menu-btn:hover{
-    color:white;
+
+.menu-btn:hover {
+    color: white;
 }
+
 .menu-btn:focus {
     border: none;
     outline: none;
-    color:black;
+    color: black;
     font-weight: bold;
-    text-decoration:none;
+    text-decoration: none;
 }
+
 table {
     margin-left: auto;
     margin-right: auto;
 }
-th,td {
+
+th {
+    font-size: larger;
+    font-family: 'Gotu';
+}
+
+th,
+td {
     border: 1px solid chartreuse;
-  }
-  
+}
+
+.outer-btn-add {
+    margin: 10px;
+    background: #92CD41;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px 10px;
+    font-family: 'Press Start 2P', serif;
+    font-size: small;
+    text-decoration: none;
+    color: white;
+    box-shadow: inset (-4px) (-4px) 0px 0px #4AA52E;
+}
+
+.outer-btn-add:hover {
+    background: chartreuse;
+    color: black;
+    box-shadow: inset (-4px*1.5) (-4px*1.5) 0px 0px #4AA52E;
+}
+
+.outer-btn-add:active {
+    box-shadow: inset 4px 4px 0px 0px #4AA52E;
+}
+
+.outer-btn-add:before,
+.outer-btn-add:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+}
+
+.outer-btn-add:before {
+    top: -6px;
+    left: 0;
+    border-top: 6px gray solid;
+    border-bottom: 6px gray solid;
+}
+
+.outer-btn-add:after {
+    left: -6px;
+    top: 0;
+    border-left: 6px gray solid;
+    border-right: 6px gray solid;
+}
+
+.outer-btn-clr {
+    margin: 10px;
+    background: #E76E55;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px 10px;
+    font-family: 'Press Start 2P', serif;
+    font-size: small;
+    text-decoration: none;
+    color: white;
+    box-shadow: inset (-4px) (-4px) 0px 0px #8C2022;
+}
+
+.outer-btn-clr:hover {
+    background: rgb(240, 24, 8);
+    color: black;
+    box-shadow: inset (-4px*1.5) (-4px*1.5) 0px 0px #8C2022;
+}
+
+.outer-btn-clr:active {
+    box-shadow: inset 4px 4px 0px 0px #8C2022;
+}
+
+.outer-btn-clr:before,
+.outer-btn-clr:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+}
+
+.outer-btn-clr:before {
+    top: -6px;
+    left: 0;
+    border-top: 6px gray solid;
+    border-bottom: 6px gray solid;
+}
+
+.outer-btn-clr:after {
+    left: -6px;
+    top: 0;
+    border-left: 6px gray solid;
+    border-right: 6px gray solid;
+}
+
+.outer-btn-upd {
+    margin: 10px;
+    background: #F7D51D;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px 10px;
+    font-family: 'Press Start 2P', serif;
+    font-size: small;
+    text-decoration: none;
+    color: rgb(168, 156, 156);
+    box-shadow: inset (-4px) (-4px) 0px 0px #E59400;
+}
+
+.outer-btn-upd:hover {
+    background: rgb(255, 251, 0);
+    color: black;
+    box-shadow: inset (-4px*1.5) (-4px*1.5) 0px 0px #E59400;
+}
+
+.outer-btn-upd:active {
+    box-shadow: inset 4px 4px 0px 0px rgb(177, 175, 54);
+}
+
+.outer-btn-upd:before,
+.outer-btn-upd:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+}
+
+.outer-btn-upd:before {
+    top: -6px;
+    left: 0;
+    border-top: 6px gray solid;
+    border-bottom: 6px gray solid;
+}
+
+.outer-btn-upd:after {
+    left: -6px;
+    top: 0;
+    border-left: 6px gray solid;
+    border-right: 6px gray solid;
+}
+
+.input {
+    color: rgba(128, 255, 0, 0.315);
+    padding: 2.5px 10px;
+}
+
+.input:visited {
+    color: chartreuse;
+}
+
+.input:hover {
+    color: chartreuse;
+}
+
+.input:focus {
+    border-color: chartreuse;
+    outline: none;
+    color: chartreuse;
+}
+
+input {
+    background-color: black;
+    color: chartreuse;
+    margin-bottom: 7px;
+    padding: 5px 10px;
+    border-color: rgba(128, 255, 0, 0.315);
+}
+
+input::placeholder {
+    color: rgba(128, 255, 0, 0.315);
+}
+
+input:hover {
+    border-color: chartreuse;
+}
+
+input:hover::placeholder {
+    color: chartreuse;
+}
+
+input:focus {
+    border-color: chartreuse;
+    outline: none;
+}
+
+input:focus::placeholder {
+    color: black;
+}
+
+.dropdownlist {
+    background-color: black;
+    color: rgba(128, 255, 0, 0.315);
+    margin-bottom: 7px;
+    padding: 5px 10px;
+    border-color: rgba(128, 255, 0, 0.315);
+    outline: none;
+}
+
+.dropdownlist:hover {
+    border-color: chartreuse;
+    color: chartreuse;
+    outline: none;
+}
+
+.dropdownlist:focus {
+    border-color: chartreuse;
+    color: chartreuse;
+    outline: none;
+}

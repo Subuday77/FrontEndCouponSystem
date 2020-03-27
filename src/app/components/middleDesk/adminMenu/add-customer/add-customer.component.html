@@ -4,6 +4,6 @@
 <input type="text" [(ngModel)]="customer.lastName" placeholder="Last Name">
 <input type="email" [(ngModel)]="customer.email" placeholder="Email">
 <input type="password" [(ngModel)]="customer.password" placeholder="Password">
-<input type="password" [(ngModel)]="rpassword" placeholder="Repeat Password">
-<button (click)="addCustomer()">Submit</button>
-<button (click)="clear()">Clear</button>
+<input type="password" [(ngModel)]="rpassword" placeholder="Repeat Password"><br>
+<button class="outer-btn-add" (click)="addCustomer()">Submit</button>
+<button class="outer-btn-clr" (click)="clear()">Clear</button>

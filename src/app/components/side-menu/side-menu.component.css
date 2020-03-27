@@ -1,6 +1,10 @@
-.menu{
+.menu {
     font-size: 20px;
     text-align: left;
     margin-left: 1rem;
     line-height: 2px;
+}
+
+.line1 {
+    text-align: left;
 }

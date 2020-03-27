@@ -9,8 +9,8 @@
             <th>Email</th>
             <th>Password</th>
             <th>UID</th>
-            
-            
+
+
         </tr>
     </thead>
     <tbody>
@@ -21,8 +21,8 @@
             <td>{{customer.email}}</td>
             <td>{{customer.password}}</td>
             <td>{{customer.uid}}</td>
-            
-            
+
+
 
         </tr>
     </tbody>
@@ -39,6 +39,6 @@
 <input type="text" [(ngModel)]="ucustomer.lastName" placeholder="Last Name">
 <input type="email" [(ngModel)]="ucustomer.email" placeholder="Email">
 <input type="password" [(ngModel)]="ucustomer.password" placeholder="Password">
-<input type="password" [(ngModel)]="rpassword" placeholder="Repeat Password">
-<button (click)="updateCustomer()">Submit</button>
-<button (click)="clear()">Clear</button>
+<input type="password" [(ngModel)]="rpassword" placeholder="Repeat Password"><br>
+<button class="outer-btn-add" (click)="updateCustomer()">Submit</button>
+<button class="outer-btn-clr" (click)="clear()">Clear</button>

@@ -54,7 +54,7 @@ export class AddCustomerComponent implements OnInit {
         } else {
 
           alert("Customer added");
-
+          this.clear();
         }
       });
     } else {

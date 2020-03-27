@@ -1,27 +1,31 @@
-<h1>Welcome, Admin</h1>
+<h1>Access level:</h1><br>
+<h1>Admin</h1>
 <br>
 <div class="sideMenu">
-    <ul>
-        <li class=line1> <button class="menu-btn" [routerLink]="['', { outlets: { middle: ['addCompany']}}]">Add
-                Company</button></li>
+        <ul>
+                <li class=line1> <button class="menu-btn" [routerLink]="['', { outlets: { middle: ['addCompany']}}]">Add
+                                Company</button></li>
 
 
-        <li class=line1> <button class="menu-btn" [routerLink]="['', { outlets: { middle: ['getAllCompanies']}}]">Get
-                All
-                Companies</button></li>
+                <li class=line1> <button class="menu-btn"
+                                [routerLink]="['', { outlets: { middle: ['getAllCompanies']}}]">Get
+                                All
+                                Companies</button></li>
 
 
-        <li class=line1><button class="menu-btn" [routerLink]="['', { outlets: { middle: ['addCustomer']}}]">Add
-                Customer</button></li>
+                <li class=line1><button class="menu-btn" [routerLink]="['', { outlets: { middle: ['addCustomer']}}]">Add
+                                Customer</button></li>
 
 
-        <li class=line1><button class="menu-btn" [routerLink]="['', { outlets: { middle: ['getAllCustomers']}}]">Get All
-                Customers</button></li>
+                <li class=line1><button class="menu-btn"
+                                [routerLink]="['', { outlets: { middle: ['getAllCustomers']}}]">Get All
+                                Customers</button></li>
 
 
 
-        <li class=line1><button class="menu-btn"
-                [routerLink]="['', { outlets: { middle: ['deleteOutdatedCoupons']}}]">Delete Outdated Coupons</button>
-        </li>
-    </ul>
+                <li class=line1><button class="menu-btn"
+                                [routerLink]="['', { outlets: { middle: ['deleteOutdatedCoupons']}}]">Delete Outdated
+                                Coupons</button>
+                </li>
+        </ul>
 </div>

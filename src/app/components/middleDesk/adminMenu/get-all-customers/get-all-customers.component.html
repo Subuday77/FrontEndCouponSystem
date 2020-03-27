@@ -5,9 +5,9 @@
 <input type="text" [(ngModel)]="firstName" placeholder="First Name">
 <input type="text" [(ngModel)]="lastName" placeholder="Last Name">
 <input type="email" [(ngModel)]="email" placeholder="Email">
-<input type="text" [(ngModel)]="uid" placeholder="UID">
-<button (click)="findCustomer()">Find</button>
-<button (click)="clear()">Clear</button>
+<input type="text" [(ngModel)]="uid" placeholder="UID"><br>
+<button class="outer-btn-add" (click)="findCustomer()">Find</button>
+<button class="outer-btn-clr" (click)="clear()">Clear</button>
 
 <table class=table>
     <thead>
@@ -30,9 +30,9 @@
             <td>{{customer.password}}</td>
             <td>{{customer.uid}}</td>
             <td>
-                <button (click)="updateCustomer(customer.id)">Update</button>
-                <button (click)="customerInfo(customer.id)">Details</button>
-                <button (click)="deleteCustomer(customer.id)">Delete</button>
+                <button class="outer-btn-upd" (click)="updateCustomer(customer.id)">Update</button>
+                <button class="outer-btn-add" (click)="customerInfo(customer.id)">Details</button>
+                <button class="outer-btn-clr" (click)="deleteCustomer(customer.id)">Delete</button>
             </td>
 
         </tr>

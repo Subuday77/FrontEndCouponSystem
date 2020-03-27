@@ -52,7 +52,7 @@ export class AddCompanyComponent implements OnInit {
         } else {
 
           alert("Company added");
-
+          this.clear();
         }
       });
     } else {

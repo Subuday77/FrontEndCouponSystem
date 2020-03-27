@@ -1,12 +1,16 @@
 <h1>All companies</h1>
 
 <h2>Search by</h2>
-<input type="number" min="0" [(ngModel)]="id" placeholder="ID">
-<input type="text" [(ngModel)]="name" placeholder="Company Name">
-<input type="email" [(ngModel)]="email" placeholder="Email">
-<input type="text" [(ngModel)]="uid" placeholder="UID">
-<button (click)="findCompany()">Find</button>
-<button (click)="clear()">Clear</button>
+<input class="input" type="number" min="0" [(ngModel)]="id" placeholder="ID">
+
+<input class="input" type="text" [(ngModel)]="name" placeholder="Company Name">
+
+<input class="input" type="email" [(ngModel)]="email" placeholder="Email">
+
+<input class="input" type="text" [(ngModel)]="uid" placeholder="UID"><br>
+
+<button class="outer-btn-add" (click)="findCompany()">Find</button>
+<button class="outer-btn-clr" (click)="clear()">Clear</button>
 
 
 
@@ -29,10 +33,9 @@
             <td>{{company.password}}</td>
             <td>{{company.uid}}</td>
             <td>
-                <button (click)="updateCompany(company.id)">Update</button>
-
-                <button (click)="companyInfo(company.id)">Details</button>
-                <button (click)="deleteCompany(company.id)">Delete</button>
+                <button class="outer-btn-upd" (click)="updateCompany(company.id)">Update</button>
+                <button class="outer-btn-add" (click)="companyInfo(company.id)">Details</button>
+                <button class="outer-btn-clr" (click)="deleteCompany(company.id)">Delete</button>
             </td>
 
         </tr>

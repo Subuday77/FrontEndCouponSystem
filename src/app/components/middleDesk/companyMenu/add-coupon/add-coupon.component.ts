@@ -61,6 +61,7 @@ export class AddCouponComponent implements OnInit {
           alert(error.error.text);
         } else {
           alert("Coupon added");
+          this.clear();
         }
       });
     } else {

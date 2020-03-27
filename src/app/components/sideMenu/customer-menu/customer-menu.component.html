@@ -1,16 +1,20 @@
-<h1>Welcome, Customer</h1>
+<h1>Access level:</h1><br>
+<h1>Customer</h1>
 <br>
 <div class="sideMenu">
     <ul>
-        <li class=line1> <button class="menu-btn" [routerLink]="['', { outlets: { middle: ['getAllAvailableCoupons']}}]">Get All Coupons</button></li>
-
- 
-<li class=line1> <button class="menu-btn" [routerLink]="['', { outlets: { middle: ['getAllCustomerCoupons']}}]">My Coupons</button></li>
+        <li class=line1> <button class="menu-btn"
+                [routerLink]="['', { outlets: { middle: ['getAllAvailableCoupons']}}]">Get All Coupons</button></li>
 
 
+        <li class=line1> <button class="menu-btn"
+                [routerLink]="['', { outlets: { middle: ['getAllCustomerCoupons']}}]">My Coupons</button></li>
 
-<li class=line1> <button class="menu-btn" [routerLink]="['', { outlets: { middle: ['updateCustomerCommon',id]}}]">View and change user details
-                </button></li>
+
+
+        <li class=line1> <button class="menu-btn"
+                [routerLink]="['', { outlets: { middle: ['updateCustomerCommon',id]}}]">View and change user
+                details</button></li>
 
     </ul>
 </div>

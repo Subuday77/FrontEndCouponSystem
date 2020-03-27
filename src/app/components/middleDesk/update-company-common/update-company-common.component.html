@@ -8,8 +8,8 @@
             <th>Email</th>
             <th>Password</th>
             <th>UID</th>
-            
-            
+
+
         </tr>
     </thead>
     <tbody>
@@ -19,8 +19,8 @@
             <td>{{company.email}}</td>
             <td>{{company.password}}</td>
             <td>{{company.uid}}</td>
-            
-            
+
+
 
         </tr>
     </tbody>
@@ -33,6 +33,6 @@
 <input type="text" [(ngModel)]="ucompany.name" placeholder="Company Name">
 <input type="email" [(ngModel)]="ucompany.email" placeholder="Email">
 <input type="password" [(ngModel)]="ucompany.password" placeholder="Password">
-<input type="password" [(ngModel)]="rpassword" placeholder="Repeat Password">
-<button (click)="updateCompany()">Submit</button>
-<button (click)="clear()">Clear</button>
+<input type="password" [(ngModel)]="rpassword" placeholder="Repeat Password"><br>
+<button class="outer-btn-add" (click)="updateCompany()">Submit</button>
+<button class="outer-btn-clr" (click)="clear()">Clear</button>

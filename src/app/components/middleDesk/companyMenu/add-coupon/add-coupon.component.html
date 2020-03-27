@@ -1,18 +1,22 @@
-<h1>Add Coupon</h1><br>
+<div class="menu">
+    <h1>Add Coupon</h1><br>
 
-<input type="text" required minlength="1" [(ngModel)]="coupon.title" placeholder="Title">
-<input type="text" required [(ngModel)]="coupon.description" placeholder="Description">
-<input type="date" required [(ngModel)]="coupon.startDate" placeholder="Start Date">
-<input type="date" required min = "{{coupon.startDate}}" [(ngModel)]="coupon.endDate" placeholder="End Date">
-<input type="number" required min = "0" [(ngModel)]="coupon.amount" placeholder="Amount">
-<input type="number" required min = "0" [(ngModel)]="coupon.price" placeholder="Price">
-<input type="text" [(ngModel)]="coupon.image" placeholder="Image">
-<select class="dropdownlist" required [(ngModel)]="coupon.category">
-    <option [ngValue]="undefined"  disabled selected>Category</option>
-    <option value="Food">Food</option>
-    <option value="Electricity">Electricity</option>
-    <option value="Restaurant">Restaurant</option>
-    <option value="Vacation">Vacation</option>
-</select><br>
-<button (click)="addCoupon()">Submit</button>
-<button (click)="clear()">Clear</button>
+    <div class="innerMenu">
+        <input type="text" required minlength="1" [(ngModel)]="coupon.title" placeholder="Title"><br>
+        <input type="text" required [(ngModel)]="coupon.description" placeholder="Description">Start Date<br>
+        <input class="input" type="date" required [(ngModel)]="coupon.startDate">End Date<br>
+        <input class="input" type="date" required min="{{coupon.startDate}}" [(ngModel)]="coupon.endDate"><br>
+        <input type="number" required min="0" [(ngModel)]="coupon.amount" placeholder="Amount"><br>
+        <input type="number" required min="0" [(ngModel)]="coupon.price" placeholder="Price"><br>
+        <input type="text" [(ngModel)]="coupon.image" placeholder="Image"><br>
+        <select class="dropdownlist" required [(ngModel)]="coupon.category"><br>
+        <option [ngValue]="undefined"  disabled selected>Category</option>
+        <option value="Food">Food</option>
+        <option value="Electricity">Electricity</option>
+        <option value="Restaurant">Restaurant</option>
+        <option value="Vacation">Vacation</option>
+        </select><br>
+        <button class="outer-btn-add" (click)="addCoupon()">Submit</button>
+        <button class="outer-btn-clr" (click)="clear()">Clear</button>
+    </div>
+</div>

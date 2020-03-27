@@ -9,8 +9,8 @@
     <option value="Restaurant">Restaurant</option>
     <option value="Vacation">Vacation</option>
 </select><br>
-<button (click)="findCoupons()">Find</button>
-<button (click)="clear()">Clear</button>
+<button class="outer-btn-add" (click)="findCoupons()">Find</button>
+<button class="outer-btn-clr" (click)="clear()">Clear</button>
 <table class=table>
     <thead>
         <tr>
@@ -37,8 +37,8 @@
             <td>{{coupon.category}}</td>
             <td>{{coupon.uid}}</td>
             <td>
-                <button (click)="updateCoupon(coupon.id)">Update</button>
-                <button (click)="deleteCoupon(coupon.id)">Delete</button>
+                <button class="outer-btn-upd" (click)="updateCoupon(coupon.id)">Update</button>
+                <button class="outer-btn-clr" (click)="deleteCoupon(coupon.id)">Delete</button>
             </td>
 
         </tr>

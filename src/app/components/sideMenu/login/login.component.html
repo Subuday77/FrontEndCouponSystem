@@ -1,25 +1,24 @@
+<form>
+    <h1>Log In</h1>
+    <br>
+    <h3>Email</h3>
+    <input type="email" name="name" autofocus required [(ngModel)]="email">
 
-    <form>
-        <h1>Log In</h1>
-        <br>
-        <h3>Email</h3>
-        <input type="email" name="name" autofocus required [(ngModel)]="email"> 
-        
-        <h3>Password</h3>
-        <input type="password" name="password"  required [(ngModel)]="password">
-        <br>
-        <h3>Position</h3>
-        <br>
-        <select class="dropdownlist" requared [(ngModel)]="position" [ngModelOptions]="{standalone: true}">
+    <h3>Password</h3>
+    <input type="password" name="password" required [(ngModel)]="password">
+    <br>
+    <h3>Position</h3>
+    <br>
+    <select id="dropdown" class="dropdownlist" requared [(ngModel)]="position" [ngModelOptions]="{standalone: true}">
             <option value="" selected disabled>Select option</option>
             <option value="admin">Admin</option>
             <option value="company">Company</option>
             <option value="customer">Customer</option>
         </select>
-        <br>
-        <button type="submit" class="lgn-btn"  (click) = "loginMethod ()">Log In</button>
+    <br>
+    <button type="submit" class="lgn-btn" (click)="loginMethod ()">Log In</button>
 
-        
-    </form>
-    
-    <div *ngIf="logout" class="square"></div>
+
+</form>
+
+<div *ngIf="logout" class="square"></div>
