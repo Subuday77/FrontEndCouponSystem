@@ -1,7 +1,7 @@
 <h1>All coupons</h1>
 
 <h2>Search by</h2>
-<input type="number" min="0" [(ngModel)]="price" placeholder="Price"><br>
+<input type="number" min="0" [(ngModel)]="price" placeholder="Price">
 <select class="dropdownlist" [(ngModel)]="category">
     <option [ngValue]="undefined" disabled selected>Category</option>
     <option value="Food">Food</option>
@@ -23,6 +23,7 @@
             <th>Price</th>
             <th>Category</th>
             <th>UID</th>
+            <th>Options</th>
         </tr>
     </thead>
     <tbody>

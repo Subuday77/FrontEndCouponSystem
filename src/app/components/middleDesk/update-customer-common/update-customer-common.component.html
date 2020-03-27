@@ -27,18 +27,18 @@
         </tr>
     </tbody>
 </table>
-<br>
-<br>
 
-<br>
-<br>
 
-<h2>What do you want to change?</h2>
-<br>
-<input type="text" [(ngModel)]="ucustomer.firstName" placeholder="First Name">
-<input type="text" [(ngModel)]="ucustomer.lastName" placeholder="Last Name">
-<input type="email" [(ngModel)]="ucustomer.email" placeholder="Email">
-<input type="password" [(ngModel)]="ucustomer.password" placeholder="Password">
-<input type="password" [(ngModel)]="rpassword" placeholder="Repeat Password"><br>
-<button class="outer-btn-add" (click)="updateCustomer()">Submit</button>
-<button class="outer-btn-clr" (click)="clear()">Clear</button>
+<div class="menu">
+    <h2>What do you want to change?</h2>
+    <br>
+    <div class="innerMenu">
+        <input type="text" [(ngModel)]="ucustomer.firstName" placeholder="First Name">
+        <input type="text" [(ngModel)]="ucustomer.lastName" placeholder="Last Name">
+        <input type="email" [(ngModel)]="ucustomer.email" placeholder="Email">
+        <input type="password" [(ngModel)]="ucustomer.password" placeholder="Password">
+        <input type="password" [(ngModel)]="rpassword" placeholder="Repeat Password"><br>
+        <button class="outer-btn-add" (click)="updateCustomer()">Submit</button>
+        <button class="outer-btn-clr" (click)="clear()">Clear</button>
+    </div>
+</div>

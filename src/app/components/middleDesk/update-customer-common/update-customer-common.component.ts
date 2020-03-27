@@ -13,7 +13,7 @@ import { CustomerService } from 'src/app/services/customer.service';
 export class UpdateCustomerCommonComponent implements OnInit {
   public customer: Customer;
   public id = -1;
-  public rpassword: String = "";
+  public rpassword: String = undefined;
   public psserr: boolean = false;
   public ucustomer: Customer = new Customer();
   constructor(private adminService: AdminService, private customerService: CustomerService, private loginService: LoginService, private route: ActivatedRoute) { }

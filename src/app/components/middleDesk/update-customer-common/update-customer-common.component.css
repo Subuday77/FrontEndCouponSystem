@@ -1,0 +1,19 @@
+.menu {
+    text-align: left;
+    margin-left: 25px;
+}
+
+.innerMenu {
+    width: 20%;
+}
+
+input,
+select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.outer-btn-add,
+.outer-btn-clr {
+    margin-top: 85px;
+}

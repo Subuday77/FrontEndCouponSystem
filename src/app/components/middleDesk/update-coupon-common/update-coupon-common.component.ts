@@ -68,6 +68,7 @@ export class UpdateCouponCommonComponent implements OnInit {
 
         alert(error.error.text);
         this.findCouponById(this.id)
+        this.clear();
       });
     }
     this.isError = false;

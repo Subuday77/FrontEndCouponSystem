@@ -13,7 +13,7 @@ import { CompanyService } from 'src/app/services/company.service';
 export class UpdateCompanyCommonComponent implements OnInit {
   public company: Company;
   public id = -1;
-  public rpassword: String ="";
+  public rpassword: String = undefined;
   public psserr: boolean = false;
   public ucompany: Company = new Company();
   constructor(private adminService: AdminService, private companyService: CompanyService, private loginService: LoginService, private route: ActivatedRoute) { }
@@ -60,6 +60,7 @@ export class UpdateCompanyCommonComponent implements OnInit {
 
       alert(error.error.text);
       this.findCompanyById(this.id)
+      this.clear();
     });
   }else{
     this.companyService.updateCompany(this.ucompany, this.loginService.token).subscribe(() => {
@@ -68,6 +69,7 @@ export class UpdateCompanyCommonComponent implements OnInit {
 
       alert(error.error.text);
       this.findCompanyById(this.id)
+      this.clear();
     });
   }
   }

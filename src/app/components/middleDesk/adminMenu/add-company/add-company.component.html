@@ -1,9 +1,13 @@
-<h1>Add Company</h1><br>
+<div class="menu">
+    <h1>Add Company</h1><br>
 
+    <div class="innerMenu">
 
-<input type="text" [(ngModel)]="company.name" placeholder="Company Name">
-<input type="email" [(ngModel)]="company.email" placeholder="Email">
-<input type="password" [(ngModel)]="company.password" placeholder="Password">
-<input type="password" [(ngModel)]="rpassword" placeholder="Repeat Password"><br>
-<button class="outer-btn-add" (click)="addCompany()">Submit</button>
-<button class="outer-btn-clr" (click)="clear()">Clear</button>
+        <input type="text" [(ngModel)]="company.name" placeholder="Company Name">
+        <input type="email" [(ngModel)]="company.email" placeholder="Email">
+        <input type="password" [(ngModel)]="company.password" placeholder="Password">
+        <input type="password" [(ngModel)]="rpassword" placeholder="Repeat Password"><br>
+        <button class="outer-btn-add" (click)="addCompany()">Submit</button>
+        <button class="outer-btn-clr" (click)="clear()">Clear</button>
+    </div>
+</div>
