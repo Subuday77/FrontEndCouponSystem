@@ -11,33 +11,39 @@
 <button class="outer-btn-add" (click)="findCoupons()">Find</button>
 <button class="outer-btn-clr" (click)="clear()">Clear</button>
 
-<table class=table>
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Start Date</th>
-            <th>End Date</th>
-            <th>Price</th>
-            <th>Category</th>
-            <th>Image</th>
-            <th>Options</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let coupon of coupons">
-            <td>{{coupon.title}}</td>
-            <td>{{coupon.description}}</td>
-            <td>{{coupon.startDate}}</td>
-            <td>{{coupon.endDate}}</td>
-            <td>{{coupon.price}}</td>
-            <td>{{coupon.category}}</td>
-            <td>{{coupon.image}}</td>
+<div style="overflow-y: auto; height: 600px;">
+    <table class=table>
 
-            <td>
-                <button class="outer-btn-add" (click)="purchaseCoupon(coupon.id)">Purchase</button>
-            </td>
 
-        </tr>
-    </tbody>
-</table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Image</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let coupon of coupons">
+                <td>{{coupon.title}}</td>
+                <td>{{coupon.description}}</td>
+                <td>{{coupon.startDate}}</td>
+                <td>{{coupon.endDate}}</td>
+                <td>{{coupon.price}}</td>
+                <td>{{coupon.category}}</td>
+                <td>{{coupon.image}}</td>
+
+                <td>
+                    <button class="outer-btn-add" (click)="purchaseCoupon(coupon.id)">Purchase</button>
+                </td>
+
+            </tr>
+        </tbody>
+
+
+    </table>
+</div>

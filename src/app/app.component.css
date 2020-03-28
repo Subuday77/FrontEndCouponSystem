@@ -1,37 +1,33 @@
-section{
+section {
     height: 100%;
     border: 2px solid gray;
     background-color: black;
     text-align: center;
     box-sizing: border-box;
     display: grid;
-    grid-template-rows: 15% 70% 15%;
-    grid-template-columns: repeat(12,1fr);
-  }
-  
-  
-  header{
+    grid-template-rows: 15% 85%;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+header {
     grid-column: span 12;
     border: 2px solid gray;
-  }
-  
-  app-side-menu{
+}
+
+app-side-menu {
     grid-column: span 2;
     border: 2px solid gray;
-    background-color:darkorange;
-    color:brown;
-    
-  }
-  
-  app-middle-desk{
+    background-color: darkorange;
+    color: brown;
+}
+
+app-middle-desk {
     grid-column: span 10;
     border: 2px solid gray;
-    
-  }
-  
-  footer{
+}
+
+
+/* footer{
     grid-column: span 12;
     border: 2px solid gray;
-  }
-  
-
+  } */
