@@ -46,7 +46,8 @@ th {
 th,
 td {
     border: 1px solid chartreuse;
-    width: 150px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .outer-btn-add {
